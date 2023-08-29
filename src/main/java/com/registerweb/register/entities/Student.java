@@ -7,7 +7,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+
 
 @Entity
 @Table(name = "tb_student")
@@ -19,6 +21,9 @@ public class Student implements Serializable {
 	private Long id;
 	private String name;
 	private Integer age;
+	
+	@OneToOne(mappedBy = "student")
+	private Adress adress;
 	
 	public Student() {
 		
@@ -52,6 +57,14 @@ public class Student implements Serializable {
 
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+	
+	public Adress getAdress() {
+		return adress;
+	}
+
+	public void setAdress(Adress adress) {
+		this.adress = adress;
 	}
 
 	@Override
