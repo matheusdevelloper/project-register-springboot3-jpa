@@ -3,6 +3,8 @@ package com.registerweb.register.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,6 +24,7 @@ public class Student implements Serializable {
 	private String name;
 	private Integer age;
 	
+	@JsonIgnore
 	@OneToOne(mappedBy = "student")
 	private Adress adress;
 	
