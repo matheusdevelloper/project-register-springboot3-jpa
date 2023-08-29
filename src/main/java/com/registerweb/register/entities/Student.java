@@ -1,7 +1,9 @@
 package com.registerweb.register.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -9,6 +11,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -27,6 +30,9 @@ public class Student implements Serializable {
 	@JsonIgnore
 	@OneToOne(mappedBy = "student")
 	private Adress adress;
+	
+	@OneToMany(mappedBy = "student")
+	private Set<Enrollment> enrollments = new HashSet<>();
 	
 	public Student() {
 		
@@ -68,6 +74,10 @@ public class Student implements Serializable {
 
 	public void setAdress(Adress adress) {
 		this.adress = adress;
+	}
+
+	public Set<Enrollment> getEnrollments() {
+		return enrollments;
 	}
 
 	@Override
