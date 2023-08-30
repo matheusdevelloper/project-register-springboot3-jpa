@@ -43,13 +43,11 @@ public class TestConfig implements CommandLineRunner{
 		Enrollment enroll1 = new Enrollment(null, "15002023", Instant.parse("2019-06-20T19:53:07Z"), st1);
 		Enrollment enroll2 = new Enrollment(null, "17002023", Instant.parse("2019-07-22T15:21:07Z"), st2);
 		Enrollment enroll3 = new Enrollment(null, "16002023", Instant.parse("2019-08-01T18:00:07Z"), st3);
-		Enrollment enroll4 = new Enrollment(null, "16002023", Instant.parse("2019-08-01T18:00:07Z"), st3);
-		Enrollment enroll5 = new Enrollment(null, "16002023", Instant.parse("2019-08-01T18:00:07Z"), st3);
 		
 	    
 		studentRepository.saveAll(Arrays.asList(st1, st2, st3));
 		adressRespository.saveAll(Arrays.asList(adrs1, adrs2, adrs3));
-		enrollmentRespository.saveAll(Arrays.asList(enroll1,  enroll2, enroll3, enroll4, enroll5));
+		enrollmentRespository.saveAll(Arrays.asList(enroll1,  enroll2, enroll3));
 	}
 	
 	

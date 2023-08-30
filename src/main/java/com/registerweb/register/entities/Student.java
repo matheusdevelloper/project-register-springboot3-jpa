@@ -31,6 +31,7 @@ public class Student implements Serializable {
 	@OneToOne(mappedBy = "student")
 	private Adress adress;
 	
+	
 	@OneToMany(mappedBy = "student")
 	private Set<Enrollment> enrollments = new HashSet<>();
 	
