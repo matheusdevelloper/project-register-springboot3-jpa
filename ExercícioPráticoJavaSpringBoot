@@ -1,0 +1,23 @@
+Problema: Sistema de Cadastro de Alunos
+
+Você foi contratado para desenvolver um sistema de cadastro de alunos para uma escola. O sistema deve permitir o cadastro de informações básicas dos alunos, seus endereços e as matrículas feitas por eles.
+
+O sistema deve ser capaz de:
+
+   1- Cadastrar um aluno com as seguintes informações:
+        Nome
+        Idade
+
+   2- Cadastrar o endereço de um aluno com as seguintes informações:
+        Rua
+        Cidade
+        Estado
+
+   3- Registrar uma matrícula de um aluno com as seguintes informações:
+        Data da matrícula
+
+   4- Associar um endereço a um aluno.
+
+   5- Associar várias matrículas a um aluno.
+
+O sistema deve ser desenvolvido utilizando o Spring Boot e JPA para persistência dos dados no banco de dados. Certifique-se de criar as classes correspondentes às entidades do diagrama de classes fornecido, definir os relacionamentos apropriados entre elas e implementar a funcionalidade de cadastro de alunos, endereços e matrículas.
