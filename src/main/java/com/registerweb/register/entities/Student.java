@@ -1,7 +1,8 @@
 package com.registerweb.register.entities;
 
 import java.io.Serializable;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -33,7 +34,7 @@ public class Student implements Serializable {
 	
 	
 	@OneToMany(mappedBy = "student")
-	private Set<Enrollment> enrollments = new HashSet<>();
+	private List<Enrollment> enrollments = new ArrayList<>();
 	
 	public Student() {
 		
@@ -77,7 +78,7 @@ public class Student implements Serializable {
 		this.adress = adress;
 	}
 
-	public Set<Enrollment> getEnrollments() {
+	public List<Enrollment> getEnrollments() {
 		return enrollments;
 	}
 
